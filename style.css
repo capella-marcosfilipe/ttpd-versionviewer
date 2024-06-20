@@ -159,3 +159,60 @@ header {
 .track-bonus {
   color: var(--color-active);
 }
+
+@media (max-width: 1366px) {
+  header {
+    width: 90%;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 845px) {
+  .column-viewer__description {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .column-viewer__description__album-info {
+    width: 100%;
+  }
+
+  .column-viewer__description__album-tracks {
+    width: 100%;
+  }
+}
+
+@media (max-width: 810px) {
+  .header__title {
+    font-size: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .column-selector {
+    width: 100%;
+  }
+
+  .column-viewer__title {
+    font-size: 2.5rem;
+    line-height: normal;
+  }
+
+  .column-viewer__description {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column-viewer__description__album-info {
+    width: 100%;
+  }
+
+  .column-viewer__description__album-tracks {
+    width: 100%;
+  }
+}
