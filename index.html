@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" version-contexto="the-manuscript">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Archives of TTPD</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="script.js" defer></script>
   </head>
@@ -20,8 +21,10 @@
           src="assets/ttpd-logo.png"
           alt="TTPD Logo"
           class="column-selector__ttpd-logo" />
-        <h2 class="column-selector__title">versions:</h2>
-        <ul>
+        <h2 class="column-selector__title">
+          Check the difference in these versions:
+        </h2>
+        <ul class="column-selector__buttons">
           <li>
             <button class="column-selector__button active">
               The Manuscript
@@ -41,8 +44,8 @@
           </li>
         </ul>
       </div>
-      <div class="column-viwer">
-        <h1 class="column-viwer__title">filename:</h1>
+      <div class="column-viewer">
+        <h1 class="column-viewer__title">filename:</h1>
         <div class="column-viewer__description">
           <div class="column-viewer__description__album-info">
             <img class="column-viewer__description__album-info__cover" />

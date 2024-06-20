@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
+:root {
+  --color-primary: #1e1e1e;
+  --color-active: #a03c3c;
+  --font-primary: "Special Elite", system-ui;
+}
+
+[version-contexto="the-manuscript"] {
+  --main-bg-color: #efebe8;
+  --color-secondary: #1e1e1e;
+}
+
+[version-contexto="the-bolter"] {
+  --main-bg-color: #a69d8e;
+  --color-secondary: #1e1e1e;
+}
+
+[version-contexto="the-albatross"] {
+  --main-bg-color: #7b7a76;
+  --color-secondary: #1e1e1e;
+}
+
+[version-contexto="the-black-dog"] {
+  --main-bg-color: #24211c;
+  --color-secondary: #c5c5c5;
+}
+
+[version-contexto="the-anthology"] {
+  --main-bg-color: #312c28;
+  --color-secondary: #c5c5c5;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  background: var(--main-bg-color);
+}
+
+body {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2rem;
+  width: 100vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 5% auto 1rem auto;
+}
+
+.header__desk {
+  color: var(--color-secondary);
+  width: 20%;
+}
+
+.header__title {
+  color: var(--color-secondary);
+  width: 20%;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  background-color: #c5c5c5;
+  border-radius: 1.25rem;
+  padding: 3rem 1.5rem;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.column-selector {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.column-selector__ttpd-logo {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.column-selector__title {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.column-selector__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+  list-style-type: none;
+}
+
+.column-selector__button {
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.active {
+  color: var(--color-active);
+}
+
+.column-viewer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.column-viewer__description {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column-viewer__title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.column-viewer__description__album-info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+}
+
+.column-viewer__description__album-info__cover {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.column-viewer__description__album-tracks {
+  list-style-type: decimal;
+  list-style-position: inside;
+  line-height: 2rem;
+  width: 40%;
+}
+
+.track-bonus {
+  color: var(--color-active);
+}
