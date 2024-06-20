@@ -2,7 +2,7 @@ import ttpdData from "./data/ttpdData.js";
 const tracksViewer = document.querySelector(
   ".column-viewer__description__album-tracks"
 );
-const versionTitle = document.querySelector(".column-viwer__title");
+const versionTitle = document.querySelector(".column-viewer__title");
 const versionCover = document.querySelector(
   ".column-viewer__description__album-info__cover"
 );
