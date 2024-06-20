@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Archives of TTPD</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -42,19 +42,17 @@
         </ul>
       </div>
       <div class="column-viwer">
-        <h1 class="column-viwer__title">filename: The Manuscript</h1>
+        <h1 class="column-viwer__title">filename:</h1>
         <div class="column-viewer__description">
           <div class="column-viewer__description__album-info">
-            <img
-              src="assets/the-manuscript.png"
-              class="column-viewer__description__album-info__cover" />
+            <img class="column-viewer__description__album-info__cover" />
             <p class="column-viewer__description__album-info__release">
-              Release Date: April 19th
+              Release Date:
             </p>
           </div>
-          <div class="column-viewer__description__album-tracks">
+          <ol class="column-viewer__description__album-tracks">
             <!-- Album tracks here -->
-          </div>
+          </ol>
         </div>
       </div>
     </section>

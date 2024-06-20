@@ -1,8 +1,8 @@
-export default ttpDate = [
+const ttpdData = [
   {
     id: 1,
     versionTitle: "The Manuscript",
-    albumCoverPath: "../images/the-manuscript.png",
+    albumCoverPath: "../assets/the-manuscript.png",
     releaseDate: "2024-04-19",
     tracks: [
       "Fortnight (feat. Post Malone)",
@@ -28,7 +28,7 @@ export default ttpDate = [
   {
     id: 2,
     versionTitle: "The Bolter",
-    albumCoverPath: "../images/the-bolter.png",
+    albumCoverPath: "../assets/the-bolter.png",
     releaseDate: "2024-04-19",
     tracks: [
       "Fortnight (feat. Post Malone)",
@@ -54,7 +54,7 @@ export default ttpDate = [
   {
     id: 3,
     versionTitle: "The Albatross",
-    albumCoverPath: "../images/the-albatross.png",
+    albumCoverPath: "../assets/the-albatross.png",
     releaseDate: "2024-04-19",
     tracks: [
       "Fortnight (feat. Post Malone)",
@@ -80,7 +80,7 @@ export default ttpDate = [
   {
     id: 4,
     versionTitle: "The Black Dog",
-    albumCoverPath: "../images/the-black-dog.png",
+    albumCoverPath: "../assets/the-black-dog.png",
     releaseDate: "2024-04-19",
     tracks: [
       "Fortnight (feat. Post Malone)",
@@ -106,7 +106,7 @@ export default ttpDate = [
   {
     id: 5,
     versionTitle: "The Black Dog",
-    albumCoverPath: "../images/the-black-dog.png",
+    albumCoverPath: "../assets/the-black-dog.png",
     releaseDate: "2024-04-19",
     tracks: [
       "Fortnight (feat. Post Malone)",
@@ -133,7 +133,7 @@ export default ttpDate = [
   {
     id: 6,
     versionTitle: "The Anthology",
-    albumCoverPath: "../images/the-anthology.png",
+    albumCoverPath: "../assets/the-anthology.png",
     releaseDate: "2024-04-19",
     tracks: [
       "Fortnight (feat. Post Malone)",
@@ -174,3 +174,5 @@ export default ttpDate = [
     fontColor: "#C5C5C5",
   },
 ];
+
+export default ttpdData;
