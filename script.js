@@ -18,75 +18,10 @@ const versionReleaseDate = document.querySelector(
   ".column-viewer__description__album-info__release"
 );
 
-// Adding the name of the version to the page
-const versionName = ttpdData[0].versionTitle.toString();
-versionTitle.innerHTML += " " + versionName;
-
-// Adding the album cover to the page
-const albumCoverPath = ttpdData[0].albumCoverPath.toString();
-versionCover.setAttribute("src", albumCoverPath);
-
-// Adding the release date to the page
-let releaseDate = new Date(ttpdData[0].releaseDate);
-const releaseDateOptions = { year: "numeric", month: "long", day: "numeric" };
-versionReleaseDate.innerHTML += releaseDate.toLocaleDateString(
-  "en-US",
-  releaseDateOptions
-);
-
-// Adding tracks and bonus tracks to the page
-let trackItemsHTML = ttpdData[0].tracks
-  .map((track) => `<li>${track}</li>`)
-  .join("");
-
-let bonusTracksItemsHTML = ttpdData[0].bonusTracks
-  .map((bonus) => `<li class="track-bonus">${bonus}</li>`)
-  .join("");
-
-tracksViewer.innerHTML = trackItemsHTML + bonusTracksItemsHTML;
+// Default version is The Manuscript
+setVersionAttributes(0);
 
 // Actions for the buttons
-
-function changeVersion(version) {
-  buttons.forEach((button) => button.classList.remove("active"));
-  html.setAttribute("version-contexto", version);
-  versionCover.setAttribute("src", `../assets/${version}.png`);
-  switch (version) {
-    case "the-manuscript":
-      setVersionAttributes(0);
-      break;
-    case "the-bolter":
-      setVersionAttributes(1);
-      break;
-    case "the-albatross":
-      setVersionAttributes(2);
-      break;
-    case "the-black-dog":
-      setVersionAttributes(3);
-      break;
-    case "the-anthology":
-      setVersionAttributes(4);
-      break;
-    default:
-      break;
-  }
-}
-
-function setVersionAttributes(index) {
-  versionTitle.innerHTML = "filename: " + ttpdData[index].versionTitle;
-  releaseDate = new Date(ttpdData[index].releaseDate);
-  versionReleaseDate.innerHTML =
-    "Release Date: " +
-    releaseDate.toLocaleDateString("en-US", releaseDateOptions);
-  trackItemsHTML = ttpdData[1].tracks
-    .map((track) => `<li>${track}</li>`)
-    .join("");
-  bonusTracksItemsHTML = ttpdData[index].bonusTracks
-    .map((bonus) => `<li class="track-bonus">${bonus}</li>`)
-    .join("");
-  tracksViewer.innerHTML = trackItemsHTML + bonusTracksItemsHTML;
-}
-
 manuscriptBt.addEventListener("click", () => {
   changeVersion("the-manuscript");
   manuscriptBt.classList.add("active");
@@ -111,3 +46,55 @@ anthologyBt.addEventListener("click", () => {
   changeVersion("the-anthology");
   anthologyBt.classList.add("active");
 });
+
+function changeVersion(version) {
+  // Remove active class from all buttons
+  buttons.forEach((button) => button.classList.remove("active"));
+
+  // Change the version contexto to the current one
+  html.setAttribute("version-contexto", version);
+
+  switch (version) {
+    case "the-manuscript":
+      setVersionAttributes(0);
+      break;
+    case "the-bolter":
+      setVersionAttributes(1);
+      break;
+    case "the-albatross":
+      setVersionAttributes(2);
+      break;
+    case "the-black-dog":
+      setVersionAttributes(3);
+      break;
+    case "the-anthology":
+      setVersionAttributes(4);
+      break;
+    default:
+      break;
+  }
+}
+
+function setVersionAttributes(index) {
+  // Name
+  versionTitle.innerHTML = "filename: " + ttpdData[index].versionTitle;
+
+  // Set the new album cover
+  versionCover.setAttribute("src", ttpdData[index].albumCoverPath.toString());
+
+  // Release Date
+  const releaseDate = new Date(ttpdData[index].releaseDate);
+  const releaseDateOptions = { year: "numeric", month: "long", day: "numeric" };
+  versionReleaseDate.innerHTML =
+    "Release Date: " +
+    releaseDate.toLocaleDateString("en-US", releaseDateOptions);
+
+  // Tracks
+  const trackItemsHTML = ttpdData[index].tracks
+    .map((track) => `<li>${track}</li>`)
+    .join("");
+  const bonusTracksItemsHTML = ttpdData[index].bonusTracks
+    .map((bonus) => `<li class="track-bonus">${bonus}</li>`)
+    .join("");
+  tracksViewer.innerHTML = trackItemsHTML + bonusTracksItemsHTML;
+}
